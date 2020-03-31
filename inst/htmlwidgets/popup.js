@@ -38,7 +38,7 @@ LeafletWidget.methods.imagePopup = function(image, group, width, height, src, na
     hght = height[imgid];
     if (imgid <= image.length) {
       pop = "<image src='" + img[imgid] + "'" + " height=" + hght + " width=" + wdth + ">";
-      layer.bindPopup(pop, { maxWidth: 2000 });
+      layer.bindPopup(pop, { maxWidth: 2000, closeOnClick: false, autoClose: false });
     }
     //debugger;
     imgid += 1;
@@ -111,7 +111,7 @@ LeafletWidget.methods.videoPopup = function(video, group, width, height, name) {
 
     if (vdoid <= video.length - 1) {
       //pop = "<video controls src='" + vdo[vdoid] + "'" + " height=" + height[vdoid] + " width=" + width[vdoid] + ">";
-      layer.bindPopup(vid, { width: wdth, height: hght, maxWidth: 2000 });
+      layer.bindPopup(vid, { width: wdth, height: hght, maxWidth: 2000, closeOnClick: false, autoClose: false });
       vdoid += 1;
     }
     //debugger;
@@ -156,7 +156,7 @@ LeafletWidget.methods.iframePopup = function(source, group, width, height, src, 
         " height=" + hght +
         "></iframe>";
 
-      layer.bindPopup(pop, { maxWidth: 2000 });
+      layer.bindPopup(pop, { maxWidth: 2000, closeOnClick: false, autoClose: false });
     }
     //debugger;
     srcid += 1;
